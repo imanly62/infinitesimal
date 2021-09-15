@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Infinitesimal Problems}
+\author{Spencer Hobson-Gutierrez and Ian Manly}
+\date{September 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 1 Problems}
+
+1.1) \textit{Show i) that $0<a$ implies that $0\neq a$; ii) $0<a$ iff $-a < 0$; iii) $0 < 1+1$; iv) and $(a<0$ or $0<a)$ implies that $0<a^2$.}\\
+
+Proof of i):\\
+
+Proof of ii): Suppose $0<a$. Then by property 3 of inequalities (pg 18), $0+(-a)< a+(-a)$, which simplifies to $-a <0$. Now suppose that $-a < 0$. Again by property 3, $-a+a < 0+a$ which is equivalent to $0 < a$.\\
+
+Proof of iii): Since $0<1$, it follows by using property 3 that $1+0 = 1 < 1+1$. Then since inequalities are transitive (property 1), we have that $0 < 1+1$.\\
+
+Proof of iv): Suppose that $0 < a$. Then multiplying both sides of this inequality by $a$, which is positive, produces $0.a<a.a=a^2$ by property 4. Finally, since $0.a=0, 0 <a^2$. On the other hand, suppose that $a < 0$. Then by adding $-a$ to both sides of the inequality we get that $0 = a-a < 0-a = -a$. Since $0 < -a$, we can multiply both sides of $a < 0$ by $-a$ to get $-a^2 < 0,$ which produces $0 < a^2$ after adding $a^2$ to both sides.\\
+
+1.2) \textit{Show that if $a<b$ then, for any $x$, either $a < x$ or $x < b$.}\\
+
+Proof: We prove this via proving the contrapositive statement: if $x\leq a$ and $b \leq x$, then $b \leq a$. To do this, we need a lemma: $a \leq b$ and $b \leq c$ implies $a \leq c$. This is proved in problem 1.4. Thus, we have $b \leq x \leq a$ implies that $b \leq a$, which is what we are trying to show.\\
+
+1.3) \textit{ Show that $(a,b)$ is empty iff not $a < b$.}\\
+
+Proof: Suppose that there is an $x \in (a,b)$. Then $a < x$ and $x < b$, so $a < b$\\
+
+1.4) \textit{Show that $\leq$ satisfies the following conditions: i) $x\leq y$ and $y \leq z$ implies $x\leq z$, ii) $x\leq x$, iii) $x \leq y$ implies $x+z \leq y+z$, iv) $\x\leq y$ and $ 0 \leq t$ implies $xt \leq yt$, v) $0\leq 1$.}\\
+
+Proof of i): \\
+
+Proof of ii): $x \leq x$ is equivalent to not $x < x$, which is true by property 2 of inequalities.\\
+
+Proof of iii): The contrapositive of property 3 of inequalities is that  $b+c \leq a+c$ implies $b\leq a$. Substitute $b = x+z$, $a = y+z$, and $c=-z$ to prove the desired result.\\
+
+Proof of iv):\\
+
+Proof of v): $0 \leq 1$ is equivalent to the statement that not $1 < 0$, which is true since $0 < 1$.\\
+
+1.5) \textit{Show that any closed interval is convex in the sense that if $x$ and $y$ are in it, so is $x+t(y-x)$ for any $t$ in $[0,1]$.}\\
+
+Proof: Suppose that $x$ and $y$ are in $[a,b]$. This means that $a\leq x \leq b$ and $a \leq y \leq b$. Mutliply everything in the first inequality by $(1-t)$, a nonnegative number, and multiply everything in the second inequality by $t$, another nonnegative number. Adding both inequalities together produces $a(1-t)+at \leq (1-t)x+ty \leq b(1-t)+bt$, which can be simplified to $a \leq x+t(y-x) \leq b$, which implies that the convex combination meets the criteria for being in $[a,b]$.\\
+
+1.6) \textit{Show that for all $\epsilon$ in $\Delta$, i) not $(\epsilon < 0$ or $ 0 < \epsilon)$, ii) $0\leq \epsilon$ and $ \epsilon \leq 0$, iii) for any $a$ in $R$, $\epsilon a$ is in $\Delta$, iv) if $a>0$ then $a+\epsilon > 0$.}\\
+
+Proof of i and ii): By DeMorgan's Laws statements i and ii are equivalent. If $\epsilon < 0$ then $-\epsilon > 0$, so by property 4 of inequalities $\epsilon^2 > 0,$ but this cannot be as $\epsilon^2 = 0$. Alternatively if $0 < \epsilon$ then $0 < \epsilon^2$ which again isn't possible since $\epsilon \in \Delta$. Thus not $(\epsilon < 0$ or $0 < \epsilon)$ is true.\\
+
+Proof of iii): $(\epsilon a)^2 = \epsilon^2 a^2 = 0a^2 = 0$, so $\epsilon a$ is in $\Delta$.\\
+
+Proof of iv): A lemma is necessary for this proof: If $a \leq b$ and $b < c$ then $a < c$. Proof of lemma: suppose that the conclusion is false and the hypothesis is true. Then $c\leq a \leq b$, which means that $ c\leq b$, but this is the same as saying not $b < c$, which is a direct contradiction of the assumption that $b < c$. Thus the lemma holds.
+Now, take $a > 0$ and add $\epsilon$ to both sides. Then $a+ \epsilon > \epsilon$, and since $ \epsilon \geq 0$ by ii we use the lemma to get $a+\epsilon > 0$.\\
+
+1.7) \textit{Show that for any $a,b$ in $R$ and all $\epsilon, $\eta$ in $\Delta$, $[a,b] = [a+\epsilon, b+ \eta]$. Deduce that $[a,b]$ is microstable.}\\
+
+Proof: Let $x \in [a,b]$. Then $a \leq x$ and $x \leq b$. Since $x\leq b, x \leq b+ \eta$ since $0 \leq \eta$. Also by ii, $x \geq x+\epsilon$, so $x \geq a+\epsilon$ as well. Thus $x \in [a+\epsilon, b+\eta]$. Now suppose that $x \in [a+\epsilon, b+ \eta]$. Since $x \geq a+\epsilon, x \geq a$. Also, since $\eta \leq 0, b+\eta \leq b$, and since $x \leq b+\eta, x\leq b$. Therefore $x \in [a,b]$, and thus $[a,b] = [a+\epsilon, b+\eta]$. In particular, $[a,b] = [a+\epsilon, b+\epsilon]$ for any $\epsilon \in \Delta$, so $[a,b]$ is microstable. \\ 
+
+1.8) \textif{$R^$
